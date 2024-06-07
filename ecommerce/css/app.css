@@ -1,0 +1,213 @@
+/* SNIPPET */
+html {
+    box-sizing: border-box;
+    /* 1 rem = 10 px*/
+    font-size: 62.5%;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* FIN - SNIPPET */
+
+body {
+    font-family: "Raleway", sans-serif;
+    line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", sans-serif;
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+/* Globales */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin-inline: auto;
+}
+
+.btn {
+    background-color: #8cbc00;
+    color: white;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+}
+
+.btn:hover {
+    background-color: #769c02;
+}
+
+/* Utilidades */
+
+.text-center {
+    text-align: center;
+}
+
+/* Header y Nav */
+.nombre-sitio span {
+    color: rgb(0, 162, 255);
+}
+
+.nombre-sitio {
+    padding-top: 5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.nav-principal {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.contenedor-navegacion {
+    border-top: .1rem solid #e1e1e1;
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    height: 55rem;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Categorias */
+
+.categorias {
+    padding-top: 5rem;
+}
+
+.contenido-principal h2,
+.categorias h3 {
+    text-align: center;
+}
+
+.categoria a {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover {
+    background-color: #037bc0;
+    color: white;
+    border-bottom-right-radius: 1rem;
+}
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Bloque Nosotros */
+.sobre-nosotros {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
+    padding: 10rem 0;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem;
+}
+
+/*CON GRID*/
+
+/* .sobre-nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8rem;
+    color: white;
+}
+
+.texto-nosotros {
+    grid-column: 2 / 3;
+} */
+
+/*CON FLEX*/
+.sobre-nosotros-grid {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
+
+.texto-nosotros {
+    flex-basis: 50%;
+    padding-left: 4rem;
+}
+
+/* Listado de Productos */
+
+.contenido-principal {
+    padding-top: 5rem;
+}
+
+.producto {
+    background-color: #037bc0;
+}
+
+.texto-producto {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p {
+    margin: 0 0 .5rem 0;
+}
+
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+.producto img {
+    transition: transition .3s ease-out;
+}
+
+.producto img:hover {
+    transform: scale(.8);
+}
+
+.listado-productos {}
