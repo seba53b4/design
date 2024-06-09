@@ -80,6 +80,139 @@ h2 {
 
 /* MY CODE FROM HERE*/
 
+/* 1 */
 .d-flex {
     display: flex;
+}
+
+/* 2 */
+.d-flex-2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* 3 */
+.d-flex-3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 4 */
+.d-flex-4 {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: space-around;
+}
+
+/* 5 */
+.d-flex-5 {
+    display: flex;
+    height: 700px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 6 */
+.d-flex-6 {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    align-items: flex-start;
+}
+
+/* 7 */
+.d-flex-7 {
+    display: flex;
+    height: 800px;
+    /* DEFAULT */
+    /* flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch; */
+    /* FIN DEFAULT */
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/* 7 */
+.d-flex-8 {
+    display: flex;
+}
+
+.d-flex-8 .box {
+    flex-basis: 33.3%;
+    flex-basis: 33.3%;
+}
+
+/* 9 */
+
+.d-flex-9 {
+    display: flex;
+    gap: 2rem;
+}
+
+.d-flex-9 .box {
+    flex-basis: calc(33.3% - 1rem);
+
+}
+
+/* 10 */
+.d-flex-10 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d-flex-10 .box {
+    flex-basis: 33.3%;
+}
+
+/* 11 - Grow la manera en que se expande*/
+
+.d-flex-11 {
+    display: flex;
+}
+
+.d-flex-11 .box:nth-child(1) {
+    flex-grow: 2;
+}
+
+.d-flex-11 .box:nth-child(2) {
+    flex-grow: 1;
+}
+
+.d-flex-11 .box:nth-child(3) {
+    flex-grow: 1;
+}
+
+/* 12  - Shrink lam anera en que se contrae*/
+.d-flex-12 {
+    display: flex;
+}
+
+.d-flex-12 .box {
+    flex-grow: 1;
+    flex-basis: 150px;
+}
+
+.d-flex-12 .box:nth-child(3) {
+    flex-shrink: 2;
+}
+
+/* 13*/
+.d-flex-12 {
+    display: flex;
+}
+
+.d-flex-12 .box {
+    /* flex-basis: 33.3%;
+    flex-grow: 1;
+    flex-shrink: 0; */
+
+    flex: 1;
+    /*Tome todo el espacio*/
+    flex: 0 0 calc(33.3% - 1rem);
+    /*Si queres darle un ancho*/
+    flex: 1 0;
+
+    /* Valores en formato [grow, shrink, flex-basis ]*/
 }
