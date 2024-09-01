@@ -1,10 +1,46 @@
 ---
+import CardVertical from "../components/CardVertical.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Real State">
-  <Header>
-    <main></main>
-  </Header>
+  <Header />
+  <main class="m-3 lg:m-[100px]">
+    <h2 class="text-[40px] font-roboto relative my-[20px]">
+      Nuestras <span class="font-bold">Propiedades</span>
+      <span class="heading-after"></span>
+    </h2>
+    <div
+      class="grid grid-cols-1 md:grid-cols-[repeat(2,minmax(300px,1fr))] lg:grid-cols-[repeat(3,minmax(300px,1fr))] grid-rows-2 gap-4"
+    >
+      <CardVertical
+        title="Casa de Lujo con 3 Cuartos"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea pariatur dolores ducimus! Repellendus maiores nemo tempore, cupiditate pariatur expedita"
+        price="500,000"
+        imageSrc="/img/propiedad_1.jpg"
+        imageAlt="Casa de Lujo con 3 Cuartos"
+        href="#"
+        className=""
+      />
+      <CardVertical
+        title="Casa de Lujo con 3 Cuartos"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea pariatur dolores ducimus! Repellendus maiores nemo tempore, cupiditate pariatur expedita"
+        price="500,000"
+        imageSrc="/img/propiedad_1.jpg"
+        imageAlt="Casa de Lujo con 3 Cuartos"
+        href="#"
+        className=""
+      />
+      <CardVertical
+        title="Casa de Lujo con 3 Cuartos"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea pariatur dolores ducimus! Repellendus maiores nemo tempore, cupiditate pariatur expedita"
+        price="500,000"
+        imageSrc="/img/propiedad_1.jpg"
+        imageAlt="Casa de Lujo con 3 Cuartos"
+        href="#"
+        className=""
+      />
+    </div>
+  </main>
 </Layout>

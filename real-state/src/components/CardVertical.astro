@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  price: string;
+  imageSrc: string;
+  imageAlt: string;
+  className: string; // Cambiado de `class` a `className`
+}
+
+const { imageSrc, imageAlt, href, title, description, price, className } =
+  Astro.props;
+---
+
+<div class={`h-auto w-full ${className}`}>
+  <a href={href} class="relative">
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      class="relative object-cover w-full sm:h-[450px] md:h-[300px]"
+    />
+    <h2
+      class="absolute bottom-0 left-0 text-white bg-black bg-opacity-50 p-2 w-full text-lg"
+    >
+      {title}
+    </h2>
+    <div class="flex flex-col p-4 gap-y-4">
+      <p class="text-gray-700">
+        {description}
+      </p>
+      <p class="text-gray-900 font-bold">$ {price}</p>
+      <a class="text-blue-500 hover:underline" href={href}>Ver Propiedad</a>
+    </div>
+  </a>
+</div>

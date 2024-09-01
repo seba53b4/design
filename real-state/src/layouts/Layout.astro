@@ -31,4 +31,19 @@ const { title } = Astro.props;
   body {
     background-color: #f0f0f0;
   }
+
+  .heading-after::after {
+    background-image: linear-gradient(
+      90deg,
+      #3b4862 0,
+      #3b4862 50%,
+      #6277a1 0,
+      #6277a1
+    );
+    content: "";
+    display: block;
+    height: 1rem;
+    margin-top: 1rem;
+    width: 15rem;
+  }
 </style>
