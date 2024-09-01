@@ -2,11 +2,12 @@
 import CardVertical from "../components/CardVertical.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+import { properties } from "../data/propiedades";
 ---
 
 <Layout title="Real State">
   <Header />
-  <main class="m-3 lg:m-[100px]">
+  <main class="m-3 my-[100px] max-w-[1200px] mx-auto md:px-4">
     <h2 class="text-[40px] font-roboto relative my-[20px]">
       Nuestras <span class="font-bold">Propiedades</span>
       <span class="heading-after"></span>
@@ -14,33 +15,19 @@ import Layout from "../layouts/Layout.astro";
     <div
       class="grid grid-cols-1 md:grid-cols-[repeat(2,minmax(300px,1fr))] lg:grid-cols-[repeat(3,minmax(300px,1fr))] grid-rows-2 gap-4"
     >
-      <CardVertical
-        title="Casa de Lujo con 3 Cuartos"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea pariatur dolores ducimus! Repellendus maiores nemo tempore, cupiditate pariatur expedita"
-        price="500,000"
-        imageSrc="/img/propiedad_1.jpg"
-        imageAlt="Casa de Lujo con 3 Cuartos"
-        href="#"
-        className=""
-      />
-      <CardVertical
-        title="Casa de Lujo con 3 Cuartos"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea pariatur dolores ducimus! Repellendus maiores nemo tempore, cupiditate pariatur expedita"
-        price="500,000"
-        imageSrc="/img/propiedad_1.jpg"
-        imageAlt="Casa de Lujo con 3 Cuartos"
-        href="#"
-        className=""
-      />
-      <CardVertical
-        title="Casa de Lujo con 3 Cuartos"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea pariatur dolores ducimus! Repellendus maiores nemo tempore, cupiditate pariatur expedita"
-        price="500,000"
-        imageSrc="/img/propiedad_1.jpg"
-        imageAlt="Casa de Lujo con 3 Cuartos"
-        href="#"
-        className=""
-      />
+      {
+        properties.map((property) => (
+          <CardVertical
+            title={property.title}
+            description={property.description}
+            price={property.price}
+            imageSrc={property.imageSrc}
+            imageAlt={property.imageAlt}
+            href={property.href}
+            className={property.className}
+          />
+        ))
+      }
     </div>
   </main>
 </Layout>
