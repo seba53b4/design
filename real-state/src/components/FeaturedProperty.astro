@@ -1,0 +1,39 @@
+---
+import LinkButton from "./LinkButton.astro";
+
+interface Props {
+  title: string;
+  text: string;
+  price: string;
+  href: string;
+  bgImage: string;
+}
+
+const { title, text, price, href, bgImage } = Astro.props;
+---
+
+<section
+  class="md:w-full bg-none bg-gray-100 md:h-[602px] md:relative md:bg-[length:100%_cover] md:bg-[-100%_50%] md:bg-no-repeat md:my-6"
+>
+  <img
+    class="w-full h-full object-cover md:w-1/2"
+    src={bgImage}
+    alt="featured property image"
+  />
+  <div class="md:absolute md:left-1/2 md:bottom-0 bg-primary md:w-1/2 h-full">
+    <div
+      class="container my-auto flex flex-col md:py-[100px] px-4 lg:px-6 w-full lg:max-w-[590px] h-full font-open-sans text-white"
+    >
+      <h3 class="my-5 text-3xl font-bold uppercase">{title}</h3>
+      <p class="my-[18px] text-18 leading-[32px]">
+        {text}
+      </p>
+      <p class="text-white font-bold text-left text-[30px]">{price}</p>
+      <LinkButton
+        href={href}
+        text="Ver Propiedad"
+        className="bg-white text-primary hover:bg-secondary hover:text-white"
+      />
+    </div>
+  </div>
+</section>

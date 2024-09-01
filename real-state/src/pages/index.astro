@@ -3,6 +3,7 @@ import CardVertical from "../components/CardVertical.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import { properties } from "../data/propiedades";
+import FeaturedProperty from "../components/FeaturedProperty.astro";
 ---
 
 <Layout title="Real State">
@@ -30,4 +31,11 @@ import { properties } from "../data/propiedades";
       }
     </div>
   </main>
+  <FeaturedProperty
+    title="Propiedad Destacada"
+    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum voluptatem suscipit ratione sapiente hic nobis quisquam, voluptates sed voluptatum enim totam quod nostrum tempore laboriosam magnam, repudiandae temporibus! Cupiditate!"
+    price="$ 1,200,000.00"
+    href="#"
+    bgImage="/img/destacada.jpg"
+  />
 </Layout>
