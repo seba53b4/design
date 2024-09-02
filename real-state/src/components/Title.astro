@@ -1,0 +1,17 @@
+---
+interface Props {
+  titleFirst: string;
+  accentRest: string;
+  className?: string;
+}
+
+const { titleFirst, accentRest, className } = Astro.props;
+---
+
+<h2
+  class={`text-[40px] font-roboto relative px-3 sm:px-0 my-[20px] ${className}`}
+>
+  {titleFirst}
+  <span class="font-bold">{accentRest}</span>
+  <span class="heading-after"></span>
+</h2>

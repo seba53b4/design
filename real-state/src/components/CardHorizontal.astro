@@ -1,0 +1,42 @@
+---
+import LinkButton from "./LinkButton.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  meta: string;
+  imageSrc: string;
+  imageAlt: string;
+  className?: string;
+}
+
+const { imageSrc, imageAlt, href, title, description, meta, className } =
+  Astro.props;
+---
+
+<div
+  class={`grid grid-cols-1 grid-flow-row auto-rows-max sm:grid-rows-1 sm:grid-cols-5 h-auto gap-x-4 mb-4 w-full md:max-h-[300px] bg-white font-open-sans ${className}`}
+>
+  <img
+    src={imageSrc}
+    alt={imageAlt}
+    class="object-cover w-full h-full md:h-[300px] col-span-1 sm:col-span-2"
+  />
+  <div class="flex flex-col p-4 h-auto col-span-1 sm:col-span-3">
+    <h2 class="text-black w-full font-bold text-3xl">
+      {title}
+    </h2>
+    <p class="text-gray-900 text-left my-[14px] text-16">
+      {meta}
+    </p>
+    <p class="text-gray-700 leading-7 my-[14px] text-14">
+      {description}
+    </p>
+    <LinkButton
+      text="Leer artículo"
+      href={href}
+      className="mt-auto w-full md:w-1/2 min-w-[128px]  sm:text-16 xl:text-18 p-1 sm:px-1 sm:py-1 md:px-2 md:py-2 bg-primary text-white hover:bg-secondary hover:text-white"
+    />
+  </div>
+</div>

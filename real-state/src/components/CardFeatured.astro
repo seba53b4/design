@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+  text: string;
+  bgImage: string;
+}
+
+const { title, text, bgImage } = Astro.props;
+---
+
+<div class="font-open-sans">
+  <img
+    class="w-[200px] h-[200px] mx-auto"
+    src={bgImage}
+    alt="imagen testimonial"
+  />
+
+  <div class="bg-white rounded-lg px-5 pt-[100px] pb-5 -mt-[100px] w-full">
+    <p class="font-bold text-center my-6 text-2xl">{title}</p>
+    <p class="testimonial__text my-4 text-16 leading-[1.8] text-center">
+      {text}
+    </p>
+  </div>
+</div>
+
+<style>
+  .testimonial__text:before {
+    background-image: url(/img/quote.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 40px;
+    margin-right: 1rem;
+    width: 40px;
+  }
+</style>

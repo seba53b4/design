@@ -8,14 +8,14 @@ interface Props {
   price: string;
   imageSrc: string;
   imageAlt: string;
-  className: string; // Cambiado de `class` a `className`
+  className?: string;
 }
 
 const { imageSrc, imageAlt, href, title, description, price, className } =
   Astro.props;
 ---
 
-<div class={`h-auto w-full ${className} bg-white font-open-sans`}>
+<div class={`h-auto w-full bg-white font-open-sans ${className}`}>
   <a href={href} class="relative block">
     <img
       src={imageSrc}

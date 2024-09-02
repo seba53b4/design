@@ -1,0 +1,45 @@
+---
+import CardFeatured from "./CardFeatured.astro";
+import CardHorizontal from "./CardHorizontal.astro";
+import Title from "./Title.astro";
+---
+
+<div
+  class="contenedor max-w-screen-xl grid grid-cols-1 px-8 lg:grid-cols-[1fr_2fr] mx-auto w-full lg:gap-x-8"
+>
+  <section>
+    <Title titleFirst="Que dicen" accentRest="Nuestros Clientes" />
+    <CardFeatured
+      bgImage="img/testimonial.jpg"
+      title="Familia Hernández"
+      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, aliquam deleniti. Id, quas porro illo deleniti excepturi hic unde eum vel mollitia aliquid molestiae earum harum exercitationem doloribus iste. Nostrum."
+    />
+  </section>
+  <section class="testimoniales-blog__blog">
+    <Title titleFirst="Últimas entradas" accentRest="de nuestro Blog" />
+    <CardHorizontal
+      title="Titulo aqui"
+      meta="Publicado por bienes raices el 10 de agosto de 2022 - 10 Comentarios"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id est neque, asperiores veritatis dolorum nisi"
+      href="#"
+      imageSrc="img/blog_1.jpg"
+      imageAlt="imagen de blog 1"
+    />
+    <CardHorizontal
+      title="Titulo aqui"
+      meta="Publicado por bienes raices el 10 de agosto de 2022 - 10 Comentarios"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id est neque, asperiores veritatis dolorum nisi"
+      href="#"
+      imageSrc="img/blog_2.jpg"
+      imageAlt="imagen de blog 1"
+    />
+    <CardHorizontal
+      title="Titulo aqui"
+      meta="Publicado por bienes raices el 10 de agosto de 2022 - 10 Comentarios"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id est neque, asperiores veritatis dolorum nisi"
+      href="#"
+      imageSrc="img/blog_3.jpg"
+      imageAlt="imagen de blog 1"
+    />
+  </section>
+</div>

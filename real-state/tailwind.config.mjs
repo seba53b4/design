@@ -6,10 +6,12 @@ export default {
       colors: {
         primary: "#3b4862",
         secondary: "#6277a1",
+        tertiary: "#283142",
       },
       fontSize: {
         18: "18px",
         16: "16px",
+        14: "14px",
       },
       fontFamily: {
         "open-sans": ["Open Sans", "Roboto", "sans-serif"],

@@ -1,18 +1,18 @@
 ---
 import CardVertical from "../components/CardVertical.astro";
 import Header from "../components/Header.astro";
+import Title from "../components/Title.astro";
+import Testimonials from "../components/Testimonials.astro";
 import Layout from "../layouts/Layout.astro";
 import { properties } from "../data/propiedades";
 import FeaturedProperty from "../components/FeaturedProperty.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Real State">
   <Header />
   <main class="m-3 my-[100px] max-w-[1200px] mx-auto md:px-4">
-    <h2 class="text-[40px] font-roboto relative my-[20px]">
-      Nuestras <span class="font-bold">Propiedades</span>
-      <span class="heading-after"></span>
-    </h2>
+    <Title titleFirst="Nuestras" accentRest="Propiedades" />
     <div
       class="grid grid-cols-1 md:grid-cols-[repeat(2,minmax(300px,1fr))] lg:grid-cols-[repeat(3,minmax(300px,1fr))] grid-rows-2 gap-4"
     >
@@ -38,4 +38,6 @@ import FeaturedProperty from "../components/FeaturedProperty.astro";
     href="#"
     bgImage="/img/destacada.jpg"
   />
+  <Testimonials />
+  <Footer />
 </Layout>
