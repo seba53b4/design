@@ -1,0 +1,13 @@
+---
+export interface Props {
+  icon: string;
+  href: string;
+  imgAlt: string;
+  className?: string;
+}
+const { icon, href, imgAlt, className } = Astro.props;
+---
+
+<a href={href} class={`flex items-center ${className}`}>
+  <img src={`/img/${icon}.svg`} alt={imgAlt} class="h-[40px] w-[40px]" />
+</a>

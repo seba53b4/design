@@ -1,0 +1,38 @@
+---
+import SocialIcon from "./SocialIcon.astro";
+const allBorders =
+  "border border-y-[1px] border-x-[1px] border-dashed border-secondary";
+---
+
+<nav class="flex flex-row h-[40px] self-center">
+  <SocialIcon
+    className={allBorders}
+    href="#"
+    imgAlt="facebook social"
+    icon="icono_facebook"
+  />
+  <SocialIcon
+    className=`${allBorders} border-l-0`
+    href="#"
+    imgAlt="twitter social"
+    icon="icono_twitter"
+  />
+  <SocialIcon
+    className=`${allBorders} border-l-0`
+    href="#"
+    imgAlt="instagram social"
+    icon="icono_instagram"
+  />
+  <SocialIcon
+    className=`${allBorders} border-l-0`
+    href="#"
+    imgAlt="youtube social"
+    icon="icono_youtube"
+  />
+  <SocialIcon
+    className=`${allBorders} border-l-0`
+    href="#"
+    imgAlt="tiktok social"
+    icon="icono_tiktok"
+  />
+</nav>
