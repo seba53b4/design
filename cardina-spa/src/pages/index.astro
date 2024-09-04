@@ -2,11 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import SwiperComponent from "../components/SwiperComponent.astro";
+import MainCard from "../components/MainCard.astro";
 ---
 
 <Layout title="Cardina SPA">
   <Header />
-  <SwiperComponent />
+  <div class="mx-auto">
+    <SwiperComponent />
+  </div>
+
   <section class="py-[80px]">
     <h1 class="font-italianno text-5xl text-secondary text-center">
       bienvenida(o) a nuestro
@@ -19,6 +23,33 @@ import SwiperComponent from "../components/SwiperComponent.astro";
     >
       Te sentirás como nueva(o) con nuestros masajistas profesionales
     </p>
+  </section>
+  <section
+    class="cards grid grid-cols-1 md:grid-cols-3 max-w-custom mx-auto gap-x-4"
+  >
+    <MainCard
+      text="conoce sobre"
+      textAccent="Nosotros"
+      image="/img/servicio_01.jpg"
+      imageAlt="masajes"
+      link="/masajes"
+    />
+
+    <MainCard
+      text="nuestros"
+      textAccent="Servicios"
+      image="/img/servicio_02.jpg"
+      imageAlt="masajes"
+      link="/masajes"
+    />
+
+    <MainCard
+      text="visita nuestra"
+      textAccent="Tienda"
+      image="/img/servicio_03.jpg"
+      imageAlt="masajes"
+      link="/masajes"
+    />
   </section>
   <main></main>
 </Layout>

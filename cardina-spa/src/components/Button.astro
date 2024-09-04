@@ -1,0 +1,19 @@
+---
+interface Props {
+  text: string;
+  link: string;
+  className?: string;
+}
+const { text, link, className } = Astro.props;
+---
+
+<a
+  class="w-[100%-40px] h-[65px] mx-5 bg-secondary flex place-content-center"
+  href={link}
+>
+  <div
+    class={`text-white font-lato text-[22px] self-center uppercase font-bold ${className}`}
+  >
+    {text}
+  </div>
+</a>

@@ -3,12 +3,16 @@ import MainNav from "./MainNav.astro";
 import SocialNav from "./SocialNav.astro";
 ---
 
-<header class="max-w-custom mx-auto pt-[50px]">
-  <div class="flex flex-col gap-y-6 md:flex-row justify-between px-8">
+<header class="mx-auto pt-[50px]">
+  <div
+    class="flex flex-col md:max-w-custom md:mx-auto gap-y-6 md:flex-row justify-between px-8"
+  >
     <div class="container w-[395px] mb-4 md:mb-0 mx-auto md:mx-0">
       <img src="/img/logo.svg" alt="logo carolina spa" />
     </div>
-    <SocialNav />
+    <div class="max-w-custom self-center">
+      <SocialNav />
+    </div>
   </div>
   <MainNav />
 </header>
