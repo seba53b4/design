@@ -3,6 +3,7 @@ Design projects with techs
 * CSS
 * JS
 * BEM
+* Tailwind
 * SCSS
 * Astro (some cases)
 * Typescript
